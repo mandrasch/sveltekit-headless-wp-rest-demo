@@ -32,7 +32,13 @@ npm run dev -- --open
 ## TODOs
 
 - [ ] Host and deploy via ploi.io + Hetzner, https://dev.to/mandrasch/host-sveltekit-apps-with-ssr-support-via-ploiio-on-hetzner-cloud-1cpa
+    - [ ] Add .env example
+    - [ ] https://dev.to/danawoodman/storing-environment-variables-in-sveltekit-2of3
+    - [ ] https://sveltekit-pico-headless-wp.mandrasch.dev/
 - [ ] Add post detail page with gutenberg styles, see: https://github.com/mandrasch/sveltekit-wp-bs5
+- [ ] Add header and footer
+- [ ] Add acf fields, custom post type + search filter in sveltekit
+- [ ] Add gmaps (or similiar)
 - [ ] Add forms example - submit via REST API
 - [ ] Add forms captcha
 - [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so
