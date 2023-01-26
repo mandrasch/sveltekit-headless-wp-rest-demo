@@ -29,6 +29,17 @@ npm install
 npm run dev -- --open
 ```
 
+## TODOs
+
+- [ ] Host and deploy via ploi.io + Hetzner, https://dev.to/mandrasch/host-sveltekit-apps-with-ssr-support-via-ploiio-on-hetzner-cloud-1cpa
+- [ ] Add post detail page with gutenberg styles, see: https://github.com/mandrasch/sveltekit-wp-bs5
+- [ ] Add forms example - submit via REST API
+- [ ] Add forms captcha
+- [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so
+- [ ] Add sitemap
+- [ ] Add search?
+
+
 ## How was this created?
 
 ```
