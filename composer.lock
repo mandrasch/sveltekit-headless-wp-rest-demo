@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8199b06f9812c8705de223a6ab5def06",
+    "content-hash": "6f39cc102e66bb2ed42d32e8782edb52",
     "packages": [
         {
             "name": "composer/installers",
@@ -1097,6 +1097,24 @@
                 }
             ],
             "time": "2022-10-16T01:01:54+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/headless-mode",
+            "version": "0.4.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/headless-mode/",
+                "reference": "tags/0.4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/headless-mode.0.4.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/headless-mode/"
         },
         {
             "name": "wpackagist-theme/twentytwentythree",
