@@ -1,0 +1,25 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "### WordPress backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandrasch/sveltekit-pico-headless-wp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandrasch/sveltekit-pico-headless-wp/issues"
+  },
+  "homepage": "https://github.com/mandrasch/sveltekit-pico-headless-wp#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.19.3",
+    "prettier": "^2.8.3",
+    "prettier-plugin-svelte": "^2.9.0"
+  }
+}
