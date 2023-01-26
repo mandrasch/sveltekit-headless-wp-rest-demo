@@ -1,5 +1,8 @@
+Work in progress. 👨‍💻
 
-# Local setup
+## Local setup 
+
+### WordPress backend
 
 ```
 ddev start && ddev composer install
@@ -7,12 +10,24 @@ ddev exec cp .env.example .env
 ddev composer install
 # import example database
 ddev snapshot restore --latest
+
+# for prettier-php support in vscode
+ddev npm install
 ```
 
 https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
 User: admin
 PW: !jIO*D^^XtAF9N4x9Z
 
+### SvelteKit frontend
+
+Currently via local (host computer) npm, could be maybe added to DDEV as well:
+
+```bash
+cd frontend/
+npm install
+npm run dev -- --open
+```
 
 ## How was this created?
 
@@ -29,6 +44,8 @@ ddev composer create roots/bedrock
 ddev launch
 # Copy ACF pro into /web/app/plugins/, activate
 ddev wp plugin activate advanced-custom-fields-pro
+# Headless Mode plugin https://wordpress.org/plugins/headless-mode/
+ddev composer require "wpackagist-plugin/headless-mode":"0.4.0"
 
 # save database snapshot for easy demo setup
 ddev snapshot
@@ -39,6 +56,11 @@ ddev snapshot
 npm create svelte@latest frontend
 cd frontend
 npm install
+
+npm i @picocss/pico
+# Add picocss - https://joyofcode.xyz/using-pico-css-with-svelte
+npm i -D sass
+npm i -D svelte-preprocess
 ```
 
 ## License
