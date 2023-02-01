@@ -1,5 +1,7 @@
 Work in progress. 👨‍💻
 
+![Screenshot current status, headline and two posts displayed, one with featured image](screenshot.jpg?raw=true)
+
 ## Local setup 
 
 ### WordPress backend
@@ -11,7 +13,7 @@ ddev exec cp .env.example .env
 # import example database snapshot
 ddev snapshot restore --latest
 # copy some assets for demo purposes
-ddev exec "rsync -avz --mkpath .upload-examples/uploads web/app/uploads"
+ddev exec "rsync -avz --mkpath .upload-examples/uploads/ web/app/uploads/"
 ```
 
 https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
