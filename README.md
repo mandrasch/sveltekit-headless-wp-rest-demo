@@ -5,14 +5,12 @@ Work in progress. 👨‍💻
 ### WordPress backend
 
 ```
+cd wp-backend/ 
 ddev start && ddev composer install
 ddev exec cp .env.example .env
 ddev composer install
 # import example database
 ddev snapshot restore --latest
-
-# for prettier-php support in vscode
-ddev npm install
 ```
 
 https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
@@ -28,6 +26,16 @@ cd frontend/
 npm install
 npm run dev -- --open
 ```
+
+### General
+
+For prettier-php support in vscode, run once in root:
+
+```
+npm install
+```
+
+https://github.com/prettier/prettier-vscode#prettier-resolution
 
 ## TODOs
 
