@@ -1,11 +1,17 @@
 # Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
+
+# For demo purposes we keep this in git, normally it is gitignored:
+#web/app/plugins/*
+#!web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/themes/twentytwentythree/
 web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
+
+# For demo purposes we keep this in git, normally it is gitignored:
+# web/app/uploads/*
+#!web/app/uploads/.gitkeep
+
+
 web/app/cache/*
 
 # WordPress
