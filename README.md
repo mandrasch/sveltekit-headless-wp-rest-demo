@@ -8,9 +8,10 @@ Work in progress. 👨‍💻
 cd wp-backend/ 
 ddev start && ddev composer install
 ddev exec cp .env.example .env
-ddev composer install
-# import example database
+# import example database snapshot
 ddev snapshot restore --latest
+# copy some assets for demo purposes
+ddev exec "rsync -avz --mkpath .upload-examples/uploads web/app/uploads"
 ```
 
 https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
