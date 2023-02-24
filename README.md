@@ -4,11 +4,9 @@ Work in progress. 👨‍💻
 
 Live: https://sveltekit-headless-wp-rest-demo.vercel.app/
 
-Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API url can be configured in `.env`-file.
+Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API URL can be configured in `.env`-file.
 
 ## Local setup
-
-### SvelteKit frontend
 
 ```bash
 npm install
@@ -16,33 +14,14 @@ npm run dev -- --open
 # Copy .env.example to .env
 ```
 
-### WordPress backend
+## Local backend (optional)
 
-This demo also ships an optional WordPress Demo Site in the `wp-backend/`-folder, installed with [DDEV + bedrock](https://ddev.readthedocs.io/en/latest/users/quickstart/#wordpress).
-
-Switch to this via `.env`-file:
+See https://github.com/mandrasch/sveltekit-headless-wp-rest-demo-backend and switch in `.env`-file to the following:
 
 ```bash
 # .env
 PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
 ```
-
-```
-# Install DDEV on your local machine:
-# https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/
-
-cd wp-backend/
-ddev start && ddev composer install
-ddev exec cp .env.example .env
-# import example database snapshot
-ddev snapshot restore --latest
-# copy some assets for demo purposes
-ddev exec "rsync -avz --mkpath .upload-examples/uploads/ web/app/uploads/"
-```
-
-https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
-User: admin
-PW: !jIO\*D^^XtAF9N4x9Z
 
 ## Deployment
 
@@ -51,24 +30,23 @@ PW: !jIO\*D^^XtAF9N4x9Z
 
 ## TODOs
 
-- [ ] Host and deploy via ploi.io + Hetzner, https://dev.to/mandrasch/host-sveltekit-apps-with-ssr-support-via-ploiio-on-hetzner-cloud-1cpa
-  - [ ] Add .env example
-  - [ ] https://dev.to/danawoodman/storing-environment-variables-in-sveltekit-2of3
-  - [ ] https://sveltekit-pico-headless-wp.mandrasch.dev/
-- [ ] Add post detail page with gutenberg styles, see: https://github.com/mandrasch/sveltekit-wp-bs5
 - [ ] Add header and footer
-- [ ] Add acf fields, custom post type + search filter in sveltekit
+- [ ] Add acf fields, custom post type + search filter in SvelteKit
 - [ ] Add gmaps (or similiar)
 - [ ] Add forms example - submit via REST API
 - [ ] Add forms captcha
-- [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so
-- [ ] Add sitemap
+- [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so, https://orestbida.com/demo-projects/cookieconsent/
+- [ ] Add sitemap, https://www.npmjs.com/package/svelte-sitemap?
 - [ ] Add search?
-- [ ] Is there a lib for that? https://dev.to/shajidhasan/add-a-youtube-like-page-loading-animation-in-sveltekit-58kp
+- [ ] Loading animation - there a lib for that? https://dev.to/shajidhasan/add-a-youtube-like-page-loading-animation-in-sveltekit-58kp
+- [ ] Follow trac ticket for "Sorry, you are not allowed to do that."
+      " on some media files -> https://core.trac.wordpress.org/ticket/41445
+
+## Resources used
+
+- https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
 
 ## How was this created?
-
-### Frontend
 
 ```bash
 # Frontend - SvelteKit
@@ -85,34 +63,8 @@ npm i -D svelte-preprocess
 npm install @wordpress/block-library --save
 ```
 
-### Backend
-
-```
-# Backend - WordPress with bedrock
-# https://ddev.readthedocs.io/en/stable/users/quickstart/#wordpress -> bedrock
-mkdir wp-backend
-cd wp-backend
-ddev config --project-type=wordpress --docroot=web --create-docroot
-ddev start
-ddev composer create roots/bedrock
-# create .env
-# install via browser
-ddev launch
-# Copy ACF pro into /web/app/plugins/, activate
-ddev wp plugin activate advanced-custom-fields-pro
-# Headless Mode plugin https://wordpress.org/plugins/headless-mode/
-ddev composer require "wpackagist-plugin/headless-mode":"0.4.0"
-
-# save database snapshot for easy demo setup
-ddev snapshot
-```
-
-## Resources
-
-- https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
-
 ## License
 
-My own work (mostly config stuff) is availabe as CC0 / Public Domain.
+My own work (mostly config stuff) is available as CC0 / Public Domain, no need for attribution.
 
-In this repository ACF pro is included for demo purposes. ACF pro is licensed as GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html). Please support the developers by purchasing a license.
+Please see `package.json` for a list of all used Open Source libraries and their respective licenses.
