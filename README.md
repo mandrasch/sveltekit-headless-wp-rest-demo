@@ -4,7 +4,7 @@ Work in progress. 👨‍💻
 
 Live: https://sveltekit-headless-wp-rest-demo.vercel.app/
 
-Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API URL can be configured in `.env`-file.
+Content is fetched from WordPress demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API URL can be configured in `.env`-file.
 
 ![Screenshot of website](screenshot1.png?raw=true)
 
@@ -63,9 +63,15 @@ npm i -D svelte-preprocess
 npm install @wordpress/block-library --save
 ```
 
-## Resources used / Credits
+## Resources used
 
 - https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
+
+## Credits
+
+- https://kit.svelte.dev/
+- https://picocss.com/
+- https://www.npmjs.com/package/@wordpress/block-library
 - https://codepen.io/HenrikFricke/pen/GRNYrXK
 
 ## License
