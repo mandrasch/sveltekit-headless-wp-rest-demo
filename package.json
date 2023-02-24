@@ -1,25 +1,39 @@
 {
-  "name": "html",
-  "version": "1.0.0",
-  "description": "### WordPress backend",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mandrasch/sveltekit-pico-headless-wp.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mandrasch/sveltekit-pico-headless-wp/issues"
-  },
-  "homepage": "https://github.com/mandrasch/sveltekit-pico-headless-wp#readme",
-  "devDependencies": {
-    "@prettier/plugin-php": "^0.19.3",
-    "prettier": "^2.8.3",
-    "prettier-plugin-svelte": "^2.9.0"
-  }
+	"name": "frontend",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"test": "playwright test",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@prettier/plugin-php": "^0.19.3",
+		"@sveltejs/adapter-auto": "^1.0.0",
+		"@sveltejs/adapter-node": "^1.1.4",
+		"@sveltejs/kit": "^1.0.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.8.4",
+		"prettier-plugin-svelte": "^2.9.0",
+		"sass": "^1.57.1",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"svelte-preprocess": "^5.0.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0",
+		"vitest": "^0.25.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"@picocss/pico": "^1.5.6"
+	}
 }
