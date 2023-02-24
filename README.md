@@ -30,9 +30,11 @@ PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
 ## Deployment
 
 - Vercel (SSR hosting)
-  - Add environment variable, see `.env.example`
+  - Just add environment variable, see `.env.example` and deploy
 - [adapter-static](https://kit.svelte.dev/docs/adapter-static) (static site)
-  - TODO: Not yet implemented / how to deploy both on same time?
+  - TODO: Not yet implemented / how to deploy both simultaneously? See e.g. https://github.com/mandrasch/aktuelle-erderhitzung for example of static site generator
+- [adapter-node](https://kit.svelte.dev/docs/adapter-node)
+  - Not implemented here, see e.g. https://dev.to/mandrasch/host-sveltekit-apps-with-ssr-support-via-ploiio-on-hetzner-cloud-1cpa
 
 ## TODOs
 
