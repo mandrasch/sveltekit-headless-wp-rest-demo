@@ -29,20 +29,21 @@ PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
 
 ## Deployment
 
-- Vercel
+- Vercel (SSR hosting)
   - Add environment variable, see `.env.example`
+- [adapter-static](https://kit.svelte.dev/docs/adapter-static) (static site)
+  - TODO: Not yet implemented / how to deploy both on same time?
 
 ## TODOs
 
-- [ ] Add header and footer
-- [ ] Add acf fields, custom post type + search filter in SvelteKit
-- [ ] Add gmaps (or similiar)
-- [ ] Add forms example - submit via REST API
-- [ ] Add forms captcha
 - [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so, https://orestbida.com/demo-projects/cookieconsent/
+- [ ] Add acf fields, custom post type + search filter in SvelteKit
+- [ ] Add gmaps (or similiar) example, gdpr-compatible
+- [ ] Add forms example - submit via REST API
+- [ ] Add forms example (CF7) with captcha
 - [ ] Add sitemap, https://www.npmjs.com/package/svelte-sitemap?
 - [ ] Add search?
-- [ ] Loading animation - there a lib for that? https://dev.to/shajidhasan/add-a-youtube-like-page-loading-animation-in-sveltekit-58kp
+- [ ] Add loading animation - there a lib for that? https://dev.to/shajidhasan/add-a-youtube-like-page-loading-animation-in-sveltekit-58kp
 - [ ] Follow trac ticket for "Sorry, you are not allowed to do that."
       " on some media files -> https://core.trac.wordpress.org/ticket/41445
 
