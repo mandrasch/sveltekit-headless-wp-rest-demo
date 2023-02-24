@@ -4,12 +4,15 @@
 
 <nav class="container-fluid">
 	<ul>
-		<li><a href="{base}/"><strong>Brand</strong></a></li>
+		<li><a href="{base}/"><strong>Example Brand</strong></a></li>
 	</ul>
 	<ul>
 		<li><a href="{base}/blocks-demo">Gutenberg Blocks Demo</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#" role="button">Button</a></li>
+		<!-- <li><a href="#">Link</a></li> -->
+		<li>
+			<a href="https://github.com/mandrasch/sveltekit-headless-wp-rest-demo" role="button">GitHub</a
+			>
+		</li>
 		<li>
 			<details role="list" dir="rtl">
 				<summary aria-haspopup="listbox" role="link" class="contrast">Examples</summary>
