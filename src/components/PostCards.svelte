@@ -30,6 +30,11 @@
 			</a>
 		{/each}
 	</div>
+	<small style="font-size:12px;"
+		>Design: Fork of <a href="https://codepen.io/HenrikFricke/pen/GRNYrXK"
+			>Codepen by Henrik Fricke</a
+		></small
+	>
 {:else}
 	<p>No posts in WordPress yet.</p>
 {/if}
