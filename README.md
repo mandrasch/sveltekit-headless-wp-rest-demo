@@ -1,6 +1,10 @@
+# SvelteKit Headless WP REST API Demo
+
 Work in progress. 👨‍💻
 
-![Screenshot current status, headline and two posts displayed, one with featured image](screenshot.jpg?raw=true)
+![Screenshot of website](screenshot1.png?raw=true)
+
+![Screenshot of website](screenshot2.png?raw=true)
 
 Live: https://sveltekit-headless-wp-rest-demo.vercel.app/
 
