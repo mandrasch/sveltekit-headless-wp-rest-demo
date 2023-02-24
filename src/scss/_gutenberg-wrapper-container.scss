@@ -48,6 +48,21 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+		.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+		.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
 		// galleries
 		.wp-block-gallery {
 			--wp--style--unstable-gallery-gap: var(
