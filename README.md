@@ -11,6 +11,8 @@ npm install
 npm run dev -- --open
 ```
 
+Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/.
+
 ### WordPress backend
 
 This demo also ships an optional WordPress Demo Site in the `wp-backend/`-folder, installed with [DDEV + bedrock](https://ddev.readthedocs.io/en/latest/users/quickstart/#wordpress).
