@@ -1,14 +1,14 @@
-# SvelteKit Headless WP REST API Demo
+# SvelteKit Headless WP REST API demo
 
 Work in progress. 👨‍💻
-
-![Screenshot of website](screenshot1.png?raw=true)
-
-![Screenshot of website](screenshot2.png?raw=true)
 
 Live: https://sveltekit-headless-wp-rest-demo.vercel.app/
 
 Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API URL can be configured in `.env`-file.
+
+![Screenshot of website](screenshot1.png?raw=true)
+
+![Screenshot of website](screenshot2.png?raw=true)
 
 ## Local setup
 
