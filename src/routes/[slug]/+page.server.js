@@ -22,10 +22,16 @@ export const load = async ({ params }) => {
         console.log('Received', { pagesReqStatus: pagesReq.status, postsReqStatus: postsReq.status });
 
 
-        if (!pagesReq.ok && postsReq.ok) {
+        if (!pagesReq.ok || !postsReq.ok) {
             // TODO: error handling needed? or covered by try/catch?
             // https://kit.svelte.dev/docs/errors
-            console.error(`Error in fetches, at least one fetch returned other status code than 200: `, { pagesReq, postsReq });
+            console.error("Error in fetches, at least one fetch returned other status code than 200!");
+            [pagesReq, postsReq].forEach(async (req) => {
+                if (!req.ok) {
+                    const errorMessageText = await req.json(); // TODO: always json?!
+                    console.error('Request failed:', { req, errorMessageText });
+                }
+            });
             // TODO: return / throw error here?
         }
 
@@ -37,7 +43,7 @@ export const load = async ({ params }) => {
         if (postsReq.ok) {
             posts = await postsReq.json();
         }
-        console.log({ pages, posts })
+        // console.log({ pages, posts })
 
         if (pages.length > 0) {
             return { entries: pages };

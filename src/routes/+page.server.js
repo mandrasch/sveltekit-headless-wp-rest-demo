@@ -10,18 +10,8 @@ export const load = async () => {
             baseCurrency: 'EUR',
             quoteCurrencies: ['CAD', 'GBP', 'IDR', 'INR', 'USD']
         };*/
-
-        const response = await fetch(`${PUBLIC_WP_REST_API_DOMAIN}/wp-json/wp/v2/posts?_embed`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            /*body: JSON.stringify({
-                query,
-                variables
-            })*/
-        });
-
+        console.log('Requesting: ', `${PUBLIC_WP_REST_API_DOMAIN}/wp-json/wp/v2/posts?_embed`);
+        const response = await fetch(`${PUBLIC_WP_REST_API_DOMAIN}/wp-json/wp/v2/posts?_embed`);
         const posts = await response.json();
         return { posts };
     } catch (error) {

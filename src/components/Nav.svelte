@@ -7,7 +7,7 @@
 		<li><a href="{base}/"><strong>Brand</strong></a></li>
 	</ul>
 	<ul>
-		<li><a href="{base}/blocks-demo">Gutenberg blocks demo</a></li>
+		<li><a href="{base}/blocks-demo">Gutenberg Blocks Demo</a></li>
 		<li><a href="#">Link</a></li>
 		<li><a href="#" role="button">Button</a></li>
 		<li>

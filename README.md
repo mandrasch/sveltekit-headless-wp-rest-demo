@@ -2,6 +2,10 @@ Work in progress. 👨‍💻
 
 ![Screenshot current status, headline and two posts displayed, one with featured image](screenshot.jpg?raw=true)
 
+Live: https://sveltekit-headless-wp-rest-demo.vercel.app/
+
+Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/. Please use your own backend if you run big tests. The backend API url can be configured in `.env`-file.
+
 ## Local setup
 
 ### SvelteKit frontend
@@ -9,9 +13,8 @@ Work in progress. 👨‍💻
 ```bash
 npm install
 npm run dev -- --open
+# Copy .env.example to .env
 ```
-
-Content is fetched from WP demo backend https://nature-blog.mandrasch.eu/.
 
 ### WordPress backend
 
