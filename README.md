@@ -42,10 +42,6 @@ PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
 - [ ] Follow trac ticket for "Sorry, you are not allowed to do that."
       " on some media files -> https://core.trac.wordpress.org/ticket/41445
 
-## Resources used
-
-- https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
-
 ## How was this created?
 
 ```bash
@@ -62,6 +58,11 @@ npm i -D svelte-preprocess
 # Gutenberg styles:
 npm install @wordpress/block-library --save
 ```
+
+## Resources used / Credits
+
+- https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
+- https://codepen.io/HenrikFricke/pen/GRNYrXK
 
 ## License
 

@@ -6,7 +6,7 @@
 	// expected: data.entries = [] (posts or pages array)
 
 	// TODO: better check / empty result handling needed
-	let entry = data.entries.length > 0 ? data.entries[0] : [{ title: { rendered: 'Not found' } }];
+	$: entry = data.entries.length > 0 ? data.entries[0] : { title: { rendered: 'Not found' } };
 </script>
 
 <!-- TODO: How to properly implement this in a fail-safe way? -->

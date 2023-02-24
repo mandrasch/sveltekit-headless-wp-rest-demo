@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import PostCards from '../components/PostCards.svelte';
 	/** @type {import('./$types').PageData} */
 	export let data; // from server side
 
@@ -11,23 +12,7 @@
 
 	<h2>Latest posts</h2>
 
-	<!-- TODO: How to properly implement this in a fail safe way? -->
-	{#if data.posts && data.posts.length > 0}
-		<div class="posts">
-			{#each data.posts as post, index (post.id)}
-				<div class="post">
-					<a href={'' + post.slug}>
-						{#if post._embedded.hasOwnProperty('wp:featuredmedia')}
-							<img src={post._embedded['wp:featuredmedia']['0'].source_url} alt="" />
-						{/if}
-						{post.title.rendered}
-					</a>
-				</div>
-			{/each}
-		</div>
-	{:else}
-		<p>No posts in WordPress yet.</p>
-	{/if}
+	<PostCards posts={data.posts} />
 </div>
 
 <!-- {JSON.stringify(data.posts)} -->
