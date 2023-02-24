@@ -9,6 +9,11 @@
 	$: entry = data.entries.length > 0 ? data.entries[0] : { title: { rendered: 'Not found' } };
 </script>
 
+<svelte:head>
+	<title>{entry.title.rendered}</title>
+	<!-- TODO: add more SEO tags, e.g. from YOAST or SlimSEO-->
+</svelte:head>
+
 <!-- TODO: How to properly implement this in a fail-safe way? -->
 <div class="gutenberg-wrapper-container">
 	<div class="gutenberg-wrapper-container__title">
