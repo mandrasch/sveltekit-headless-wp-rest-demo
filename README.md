@@ -6,8 +6,6 @@ Work in progress. 👨‍💻
 
 ### SvelteKit frontend
 
-Currently via local (host computer) npm, could be maybe added to DDEV as well:
-
 ```bash
 npm install
 npm run dev -- --open
@@ -16,6 +14,13 @@ npm run dev -- --open
 ### WordPress backend
 
 This demo also ships an optional WordPress Demo Site in the `wp-backend/`-folder, installed with [DDEV + bedrock](https://ddev.readthedocs.io/en/latest/users/quickstart/#wordpress).
+
+Switch to this via `.env`-file:
+
+```bash
+# .env
+PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
+```
 
 ```
 # Install DDEV on your local machine:
@@ -34,7 +39,10 @@ https://sveltekit-pico-headless-wp.ddev.site/wp-admin/
 User: admin
 PW: !jIO\*D^^XtAF9N4x9Z
 
-### General
+## Deployment
+
+- Vercel
+  - Add environment variable, see `.env.example`
 
 ## TODOs
 
@@ -51,6 +59,7 @@ PW: !jIO\*D^^XtAF9N4x9Z
 - [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so
 - [ ] Add sitemap
 - [ ] Add search?
+- [ ] Is there a lib for that? https://dev.to/shajidhasan/add-a-youtube-like-page-loading-animation-in-sveltekit-58kp
 
 ## How was this created?
 
@@ -66,6 +75,9 @@ npm i @picocss/pico
 # Add picocss - https://joyofcode.xyz/using-pico-css-with-svelte
 npm i -D sass
 npm i -D svelte-preprocess
+
+# Gutenberg styles:
+npm install @wordpress/block-library --save
 ```
 
 ### Backend
@@ -89,6 +101,10 @@ ddev composer require "wpackagist-plugin/headless-mode":"0.4.0"
 # save database snapshot for easy demo setup
 ddev snapshot
 ```
+
+## Resources
+
+- https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
 
 ## License
 

@@ -1,0 +1,71 @@
+// Most styles are retrieved via npm "@wordpress/block-library",
+// (https://developers.wpengine.com/blog/gutenberg-in-headless-wordpress-render-blocks-as-html
+
+// ... but there are some additions needed (globally)
+
+// TODO: is there a package as well?
+// TODO: .is-layout-constrained here as well like WP?
+.gutenberg-wrapper-container {
+	// css vars
+	--wp--style--global--content-size: 750px;
+	--wp--style--global--wide-size: 1200px;
+
+	--wp--style--block-gap: 1.5rem;
+
+	// border: 1px solid red;
+
+	// .gutenberg-content-container__title
+	&__title {
+		max-width: var(--wp--style--global--content-size);
+		margin: 50px auto 0 auto;
+	}
+	// .gutenberg-content-container__wp-block-post-content
+	&__wp-block-post-content {
+		// border: 1px solid blue;
+
+		& > * + * {
+			// https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-start
+			margin-block-start: 1.5rem;
+			margin-block-end: 0;
+		}
+
+		// original: body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+		& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		// TODO: do we get these styles from somewhere?
+		// fix for .alignwide, not in block library styles?
+		.alignwide {
+			max-width: 1200px; // TODO: use var
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.alignfull {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		// galleries
+		.wp-block-gallery {
+			--wp--style--unstable-gallery-gap: var(
+				--wp--style--gallery-gap-default,
+				var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em))
+			);
+			gap: var(
+				--wp--style--gallery-gap-default,
+				var(--gallery-block--gutter-size, var(--wp--style--block-gap, 0.5em))
+			);
+		}
+
+		.is-layout-flex {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.figure.wp-block-gallery.has-nested-images {
+			align-items: normal;
+		}
+	}
+}

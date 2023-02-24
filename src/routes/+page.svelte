@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	/** @type {import('./$types').PageData} */
 	export let data; // from server side
 </script>
