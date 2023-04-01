@@ -18,7 +18,7 @@
 						<img
 							src={post._embedded['wp:featuredmedia']['0'].source_url}
 							class="card__image"
-							alt="brown couch"
+							alt=""
 						/>
 					{/if}
 					<div class="card__content">

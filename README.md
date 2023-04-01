@@ -14,8 +14,8 @@ Content is fetched from WordPress demo backend https://nature-blog.mandrasch.eu/
 
 ```bash
 npm install
-npm run dev -- --open
 # Copy .env.example to .env
+npm run dev -- --open
 ```
 
 ## Local backend (optional)
@@ -38,8 +38,15 @@ PUBLIC_WP_REST_API_DOMAIN=https://sveltekit-headless-wp-rest-demo.ddev.site
 
 ## TODOs
 
+- [ ] Add post list with pagination
+- [ ] Add acf fields, custom post type + search filter for CPTs
+  - https://www.youtube.com/watch?v=lrzHaTcpRh8
+  - https://www.youtube.com/watch?v=6uNwXEyIGI4
+  - https://www.youtube.com/watch?v=ErUPsA0TDLE
+  - https://www.youtube.com/watch?v=aZZ6Cko4nKU
+  - https://svelte.dev/repl/e67e1a90ef3945ec988bf39f6a10b6b3?version=3.32.3
+  - use grid.js or AG-grid?
 - [ ] Add cookie / 2 click privacy solution for embeds, see: https://github.com/mandrasch/wie-steht-es-um-das-klima-so, https://orestbida.com/demo-projects/cookieconsent/
-- [ ] Add acf fields, custom post type + search filter in SvelteKit
 - [ ] Add gmaps (or similiar) example, gdpr-compatible
 - [ ] Add forms example - submit via REST API
 - [ ] Add forms example (CF7) with captcha

@@ -1,7 +1,7 @@
 <div class="footer">
 	<div class="footer__content">
 		This is only a demo site for testing SvelteKit + WordPress. See <a
-			href="impressum & Datenschutz – Matthias Andrasch">imprint & privacy</a
+			href="https://matthias-andrasch.eu/blog/impressum-datenschutz/">imprint & privacy</a
 		>
 		and <a href="https://vercel.com/legal/privacy-policy">vercel privacy terms</a>.
 	</div>
