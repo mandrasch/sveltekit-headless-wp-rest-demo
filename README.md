@@ -86,6 +86,6 @@ npm install @wordpress/block-library --save
 
 ## License
 
-My own work (mostly config stuff) is available as CC0 / Public Domain, no need for attribution.
+My own work (mostly config stuff) is available as CC0 / Public Domain, no need for attribution. Due to compatibility to SvelteKit and other packages, I also licensed this as MIT license.
 
 Please see `package.json` for a list of all used Open Source libraries and their respective licenses.
